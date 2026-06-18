@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons"
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import { useTheme } from "@/context/ThemeContext"
+import { router } from "expo-router"
 import { classes, member } from "@/data/mockData"
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
       style={[styles.container, { backgroundColor: theme.background }]}
       contentContainerStyle={styles.content}
     >
+      
       <View style={styles.header}>
+        
         <View>
           <Text style={[styles.smallText, { color: theme.muted }]}>
             Welcome back
@@ -20,7 +23,16 @@ export default function Home() {
           <Text style={[styles.title, { color: theme.text }]}>
             Hi, {member.name}
           </Text>
+
+        
         </View>
+        
+            <TouchableOpacity
+              style={styles.logoutButton}
+              onPress={() => router.replace("/")}
+            >
+              <Text style={styles.logoutText}>Logout</Text>
+            </TouchableOpacity>
 
         <View style={[styles.avatar, { backgroundColor: theme.gold }]}>
           <Text style={styles.avatarText}>{member.name.charAt(0)}</Text>
@@ -328,4 +340,15 @@ const styles = StyleSheet.create({
     color: "#000",
     fontWeight: "900",
   },
+  logoutButton: {
+  backgroundColor: "#ff5a5a",
+  paddingHorizontal: 14,
+  paddingVertical: 10,
+  borderRadius: 12,
+},
+
+logoutText: {
+  color: "#fff",
+  fontWeight: "800",
+},
 })
