@@ -1,6 +1,11 @@
 {
   "expo": {
     "name": "funk-fighting-app",
+    "splash": {
+      "image": "./assets/images/funk-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0B0B"
+    },
     "slug": "funk-fighting-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +13,11 @@
     "scheme": "funkfightingapp",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.anonymous.funkfightingapp",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +26,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.funkfightingapp"
     },
     "web": {
       "output": "static",
@@ -39,6 +49,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c597755d-8ced-480b-aea1-4de5116d6c4e"
+      }
     }
   }
 }

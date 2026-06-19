@@ -34,9 +34,9 @@ export default function Home() {
               <Text style={styles.logoutText}>Logout</Text>
             </TouchableOpacity>
 
-        <View style={[styles.avatar, { backgroundColor: theme.gold }]}>
+        {/* <View style={[styles.avatar, { backgroundColor: theme.gold }]}>
           <Text style={styles.avatarText}>{member.name.charAt(0)}</Text>
-        </View>
+        </View> */}
       </View>
 
       <View style={[styles.heroCard, { backgroundColor: theme.green }]}>

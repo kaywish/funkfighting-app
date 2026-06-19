@@ -3,30 +3,42 @@ import { createContext, ReactNode, useContext, useEffect, useMemo, useState } fr
 
 const darkTheme = {
   isDark: true,
-  background: "#17121F",
-  surface: "#241D2E",
-  card: "#2D2538",
-  whiteCard: "#F7F7F4",
+
+  background: "#0F1115",
+  surface: "#171B22",
+
+  card: "#1B212B",
+  whiteCard: "#F8F9FA",
+
   gold: "#FFC324",
-  green: "#0D8541",
+  green: "#16A34A",
+
   text: "#FFFFFF",
-  darkText: "#17121F",
-  muted: "#B8AFC4",
+  darkText: "#111827",
+
+  muted: "#9CA3AF",
+
   border: "rgba(255,255,255,0.08)",
 }
 
 const lightTheme = {
   isDark: false,
-  background: "#F4F4F4",
+
+  background: "#F6FAF7",
   surface: "#FFFFFF",
+
   card: "#FFFFFF",
   whiteCard: "#FFFFFF",
+
   gold: "#FFC324",
   green: "#0D8541",
-  text: "#17121F",
-  darkText: "#17121F",
-  muted: "#6B6472",
-  border: "rgba(0,0,0,0.08)",
+
+  text: "#111827",
+  darkText: "#111827",
+
+  muted: "#6B7280",
+
+  border: "#E2E8E5",
 }
 
 type Theme = typeof darkTheme
@@ -38,7 +50,7 @@ const ThemeContext = createContext<{
 }>({
   theme: darkTheme,
   isDark: true,
-  toggleTheme: () => {},
+  toggleTheme: () => { },
 })
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
